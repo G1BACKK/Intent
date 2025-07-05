@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .payment-container {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        .payment-btn {
+            background-color: #5f2dee;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .payment-btn:hover {
+            background-color: #4a1fc1;
+        }
+        .upi-id {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Make a Payment</h2>
+        <p>Amount to pay: <strong>₹495.00</strong></p>
+        
+        <div class="upi-id">
+            UPI ID: g1g4822917.rzp@icici
+        </div>
+        
+        <p>Click the button below to pay via PhonePe</p>
+        
+        <a href="intent://upi/pay?pa=g1g4822917.rzp@icici&pn=G1G4&am=495&cu=INR#Intent;scheme=upi;package=com.phonepe.app;end;" 
+           class="payment-btn">
+            Pay ₹495 via PhonePe
+        </a>
+        
+        <p style="margin-top: 30px; font-size: 12px; color: #666;">
+            Note: You'll be redirected to the PhonePe app to complete the payment
+        </p>
+    </div>
+</body>
+</html>
